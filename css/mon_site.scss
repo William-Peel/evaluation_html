@@ -1,20 +1,42 @@
 @import 'reset';
-@import 'menu';
 @import 'svg';
-
 @font-face {
   font-family: "Police_perso";
   src: url('../fonts/BerninaSans-Web-CondensedBold.woff2');
 }
 
+.background{
+  width: 100%;
+}
+.text_pub{
+  font-weight:bold;
+}
+.text_plus_petit{
+  font-size: 12px;
+}
+body{
+  background-color: #f7ffff;
+}
 body,article,footer,header{
   font-family: "Police_perso", Helvetica, Arial, sans-serif;
 }
 header{
   position:relative;
 }
+.rdv, h2{
+  color:#00465b;
+}
+.rdv{
+ background: rgba(255,255,255,0);
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+}
+p{
+  color: #00465b;
+}
 .pub{
-  background-color: #b02d10;
+  background-color: darken(red,10);
   width:200px;
   position:absolute;
   top: 60px; left: 170px;
@@ -33,7 +55,11 @@ header{
   width:100%;
   color:white;
   font-size: 10px;
+  p,h2{
+    color:white;
+  }
 }
+
 .inner{
   width: 90%;
   margin-left: 20px;
@@ -41,17 +67,29 @@ header{
 }
 .footer_img{
   width: 150px;
+  text-align: center;
 }
 .footer_img img{
-  width: 100px;
+  width: 150px;
 }
 .arrondir{
   $color:opacify(white,0.5);
   border: 5px solid $color;
-  border-radius: 50px;
+  border-radius: 100px;
 }
 .active{
   order:1;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.top .img{
+  width: 200px;
+}
+.center{
+  text-align: center;
+  color: #00465b;
 }
 footer{
   margin-left: 20%;
@@ -61,23 +99,61 @@ footer{
   flex-wrap: wrap;
 }
 
+
+
 /**body{
   background-position: center;
   background-repeat:no-repeat;
   background-size: 100%;
 }**/
 
-@media (min-width: 668px){
+@media (min-width: 556px){
+  .inner h2{
+    display: block;
+  }
   .active{
     order:-1;
   }
+  .pub{
+    top: 60px; left: 350px;
+  }
+  .bandeau_background{
+    top:350px;
+  }
+}
+@media (min-width: 834px){
+  footer{
+    justify-content: space-between;
+    margin: 0px;
+  }
+  .pub{
+    top: 60px; left: 500px;
+  }
+  .bandeau_background{
+    top:450px;
+  }
+  .inner{
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 }
 @media (min-width: 1200px){
-  .inner{
-    margin-left: 25%;
-    margin-right: 25%;
+  .pub{
+    top: 60px; left: 900px;
+  }
+  .bandeau_background{
+    top:650px;
   }
   footer{
     justify-content: space-between;
+  }
+}
+@media (min-width: 1900px){
+  .pub{
+    top: 60px; left: 1600px;
+  }
+  .bandeau_background{
+    top:1050px;
   }
 }
