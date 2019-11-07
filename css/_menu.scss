@@ -1,0 +1,55 @@
+img{
+  width: 100%;
+}
+.menu{
+  display: none;
+}
+label[for=hamburger]{
+  margin-left: 15px;
+  margin-top: 5px;
+  width: 30px;
+}
+.maNav{
+  background-color: #868e96;
+  .burger{
+    display: none;
+  }
+  .burger:checked ~ nav{
+    display: block;
+  }
+  li{
+    list-style: none;
+  }
+  ul{
+    margin-bottom: 0px;
+  }
+  li > a{
+    color: white;
+  }
+}
+
+
+@media (min-width: 768px){
+  .maNav{
+    display: flex;
+    nav{
+      display:block;
+    }
+    ul{
+      display: flex;
+      flex-direction: row;
+      //justify-content: center;  met au centre les liens du menu
+    }
+    li{
+      margin: 10px;
+    }
+  }
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+  label > img, .burger{
+    display: none;
+  }
+}
