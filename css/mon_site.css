@@ -374,6 +374,7 @@ body, article, footer, header {
 
 header {
   position: relative;
+  z-index: 1;
 }
 
 .rdv, h2 {
@@ -382,9 +383,11 @@ header {
 
 .rdv {
   background: rgba(255, 255, 255, 0);
-  width: 150px;
-  height: 50px;
+  width: 125px;
+  height: 35px;
   margin: 5px;
+  border-radius: 8px;
+  padding: 0px;
 }
 
 p {
@@ -409,22 +412,34 @@ p {
 }
 
 .bandeau_background {
-  position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
-  top: 200px;
+  position: absolute;
+  z-index: 2;
   width: 100%;
   color: white;
   font-size: 10px;
+  margin-bottom: 15px;
 }
 
 .bandeau_background p, .bandeau_background h2 {
   color: white;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+.alignement {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .inner {
   width: 90%;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .footer_img {
@@ -451,6 +466,8 @@ p {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .top .img {
@@ -490,9 +507,6 @@ footer {
     top: 60px;
     left: 350px;
   }
-  .bandeau_background {
-    top: 350px;
-  }
 }
 
 @media (min-width: 834px) {
@@ -504,9 +518,6 @@ footer {
   .pub {
     top: 60px;
     left: 500px;
-  }
-  .bandeau_background {
-    top: 450px;
   }
   .inner {
     width: 60%;
@@ -521,7 +532,12 @@ footer {
     left: 900px;
   }
   .bandeau_background {
-    top: 650px;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bandeau_background p {
+    margin-top: 5px;
+    margin-left: 5px;
   }
   footer {
     -ms-flex-pack: justify;
@@ -533,9 +549,6 @@ footer {
   .pub {
     top: 60px;
     left: 1600px;
-  }
-  .bandeau_background {
-    top: 1050px;
   }
 }
 

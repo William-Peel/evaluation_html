@@ -22,15 +22,18 @@ body,article,footer,header{
 }
 header{
   position:relative;
+  z-index: 1;
 }
 .rdv, h2{
   color:#00465b;
 }
 .rdv{
  background: rgba(255,255,255,0);
-  width: 150px;
-  height: 50px;
+  width: 125px;
+  height: 35px;
   margin: 5px;
+  border-radius:8px;
+  padding: 0px;
 }
 p{
   color: #00465b;
@@ -49,21 +52,28 @@ p{
   color:white;
 }
 .bandeau_background{
-  position: absolute;
   background-color: rgba(255,255,255,0.5);
-  top:200px;
+  position:absolute;
+  z-index: 2;
   width:100%;
   color:white;
   font-size: 10px;
+  margin-bottom: 15px;
   p,h2{
     color:white;
+    margin-left: 20px;
+    margin-bottom: 0px;
   }
 }
-
+.alignement{                      //Pour positionner le bandeau blanc sous l'image
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
 .inner{
   width: 90%;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .footer_img{
   width: 150px;
@@ -83,6 +93,7 @@ p{
 .top{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .top .img{
   width: 200px;
@@ -98,6 +109,7 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
 }
+
 
 
 
@@ -117,9 +129,6 @@ footer{
   .pub{
     top: 60px; left: 350px;
   }
-  .bandeau_background{
-    top:350px;
-  }
 }
 @media (min-width: 834px){
   footer{
@@ -128,9 +137,6 @@ footer{
   }
   .pub{
     top: 60px; left: 500px;
-  }
-  .bandeau_background{
-    top:450px;
   }
   .inner{
     width:60%;
@@ -142,8 +148,12 @@ footer{
   .pub{
     top: 60px; left: 900px;
   }
-  .bandeau_background{
-    top:650px;
+  .bandeau_background{          //Pour le text du bandeau blanc sous l'image
+    display: flex;
+    p{
+      margin-top:5px ;
+      margin-left: 5px;
+    }
   }
   footer{
     justify-content: space-between;
@@ -152,8 +162,5 @@ footer{
 @media (min-width: 1900px){
   .pub{
     top: 60px; left: 1600px;
-  }
-  .bandeau_background{
-    top:1050px;
   }
 }
