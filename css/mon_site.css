@@ -361,15 +361,15 @@ template {
 }
 
 .text_plus_petit {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 body {
   background-color: #f7ffff;
 }
 
-body, article, footer, header {
-  font-family: "Police_perso", Helvetica, Arial, sans-serif;
+body, article, footer, header, H1 {
+  font-family: Police_perso;
 }
 
 header {
@@ -395,8 +395,8 @@ p {
 }
 
 .pub {
-  background-color: #cc0000;
-  width: 200px;
+  background-color: #990000;
+  width: 220px;
   position: absolute;
   top: 60px;
   left: 170px;
@@ -404,6 +404,7 @@ p {
   text-align: center;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
+  padding: 5px;
 }
 
 .pub p {
