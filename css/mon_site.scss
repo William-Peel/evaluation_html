@@ -5,36 +5,27 @@
   font-family: "Police_perso";
   src: url('../fonts/BerninaSans-Web-CondensedBold.woff2');
 }
-
-.background{
-  width: 100%;
-}
-.text_pub{
-  font-weight:bold;
-}
-.text_plus_petit{
-  font-size: 11px;
+*{
+  font-family: Police_perso;
 }
 body{
   background-color: #f7ffff;
 }
-body,article,footer,header,H1{
-  font-family: Police_perso;
+.inner{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
+.image_background{
+  width: 100%;
+}
+.text_plus_petit{
+  font-size: 11px;
+}
+
 header{
   position:relative;
   z-index: 1;
-}
-.rdv, h2{
-  color:#00465b;
-}
-.rdv{
- background: rgba(255,255,255,0);
-  width: 125px;
-  height: 35px;
-  margin: 5px;
-  border-radius:8px;
-  padding: 0px;
 }
 p{
   color: #00465b;
@@ -43,7 +34,7 @@ p{
   background-color: darken(red,20);
   width:220px;
   position:absolute;
-  top: 60px; left: 170px;
+  top: 60px; right: 20px;
   border-radius: 10px;
   text-align: center;
   transform: rotate(25deg);
@@ -52,6 +43,9 @@ p{
 .pub p{
   margin:0;
   color:white;
+}
+.text_pub{
+  font-weight:bold;
 }
 .bandeau_background{
   background-color: rgba(255,255,255,0.5);
@@ -67,40 +61,35 @@ p{
     margin-bottom: 0px;
   }
 }
-.alignement{                      //Pour positionner le bandeau blanc sous l'image
+.align_bandeau{                      //Pour positionner le bandeau blanc sous l'image
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
 }
-.inner{
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-.footer_img{
-  width: 150px;
-  text-align: center;
-}
-.footer_img img{
-  width: 150px;
-}
-.arrondir{
-  $color:opacify(white,0.5);
-  border: 5px solid $color;
-  border-radius: 100px;
-}
-.active{
+
+.changement_order{
   order:1;
 }
-.top{
+.article_top{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.top .img{
+.article_top .img{
   width: 200px;
 }
-.center{
+.btn_rdv, h2{
+  color:#00465b;
+}
+.btn_rdv{
+  background: rgba(255,255,255,0);
+  width: 125px;
+  height: 35px;
+  margin: 5px;
+  border-radius:8px;
+  padding: 0px;
+}
+.article_center{
   text-align: center;
   color: #00465b;
 }
@@ -111,34 +100,31 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
 }
+.arrondir{
+  $color:opacify(white,0.5);
+  border: 5px solid $color;
+  border-radius: 100px;
+}
+.footer_img{
+  width: 200px;
+  text-align: center;
+}
+.footer_img img{
+  width: 200px;
+}
 
 
 
 
-/**body{
-  background-position: center;
-  background-repeat:no-repeat;
-  background-size: 100%;
-}**/
-
-@media (min-width: 556px){
+@media (min-width: 668px){
   .inner h2{
     display: block;
   }
-  .active{
-    order:-1;
-  }
-  .pub{
-    top: 60px; left: 350px;
-  }
-}
-@media (min-width: 834px){
   footer{
-    justify-content: space-between;
     margin: 0px;
   }
-  .pub{
-    top: 60px; left: 500px;
+  .changement_order{
+    order:-1;
   }
   .inner{
     width:60%;
@@ -146,10 +132,7 @@ footer{
     margin-right: 20%;
   }
 }
-@media (min-width: 1200px){
-  .pub{
-    top: 60px; left: 900px;
-  }
+@media (min-width: 1000px){
   .bandeau_background{          //Pour le text du bandeau blanc sous l'image
     display: flex;
     p{
@@ -159,10 +142,5 @@ footer{
   }
   footer{
     justify-content: space-between;
-  }
-}
-@media (min-width: 1900px){
-  .pub{
-    top: 60px; left: 1600px;
   }
 }
